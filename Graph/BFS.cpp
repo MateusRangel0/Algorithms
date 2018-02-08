@@ -9,7 +9,7 @@ int dist[MAXN];
 
 void bfs(int no) {
     queue<int> q;
-
+    q.push(no);
     vis[no] = true;
     dist[no] = 0;
     while(!q.empty()) {
