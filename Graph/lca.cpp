@@ -21,7 +21,7 @@ void dfs(int node) {
 }
 
 void build() {
-    for(int i = 0; i < log; i++) {
+    for(int i = 1; i < log; i++) {
         for(int j = 0; j < MAXN; j++) {
             parent[i][j] = parent[i-1][parent[i-1][j]];
         }
