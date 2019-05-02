@@ -6,11 +6,11 @@ using namespace std;
 vector<int> grafo[MAXN];
 bitset<MAXN> vis;
 
-void dfs(int no) {
-    vis[no] = true;
-    for(int i = 0; i < grafo[no].size(); i++) {
+void dfs(int node) {
+    vis[node] = true;
+    for(int i = 0; i < grafo[node].size(); i++) {
         if(!vis[grafo[node][i]]) {
-            dfs(grafo[no][i]);
+            dfs(grafo[node][i]);
         }
     }
 }
